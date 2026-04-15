@@ -116,10 +116,13 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
 
                     {/* DESCRIPTION */}
                     <p className="text-sm opacity-80">
-                      Toca para ver los detalles de {cat.toLowerCase()}
+                      Explorar detalles de {cat.toLowerCase()}
                     </p>
 
-                   
+                    {/* CTA MOBILE-FIRST */}
+                    <div className="mt-3 flex items-center gap-2 text-sm font-semibold text-white/90 md:opacity-0 md:group-hover:opacity-100 transition">
+                      Toca para ver
+                    </div>
 
                   </div>
                 </div>
