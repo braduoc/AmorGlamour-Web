@@ -62,7 +62,7 @@ Precio: $${product.precio ?? 0}`;
 
   return (
     <div className="min-h-screen bg-neutral-100">
-      <div className="max-w-7xl p-10">
+      <div className="max-w-7xl p-6">
 
         {/* BACK */}
         <Button
