@@ -10,7 +10,7 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <motion.div
-      className="group relative bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200 hover:shadow-xl transition-all duration-300 my-2"
+      className="group relative bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200 hover:shadow-xl transition-all duration-300 "
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

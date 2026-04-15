@@ -45,7 +45,7 @@ export function CategoriaPage() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-100 p-10 relative">
+    <div className="min-h-screen bg-neutral-100 p-8 relative">
 
       {/* BACK BUTTON */}
       <Button variant="ghost" className="mb-6 bg-neutral-200 hover:bg-neutral-300">
