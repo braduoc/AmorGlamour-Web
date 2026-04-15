@@ -50,9 +50,7 @@ export function ProductDetail() {
   const handleBuyNow = () => {
     const message = `Hola! Me interesa:
 ${product.categoria ?? ""}
-${product.nombre ?? ""}
-Precio: $${product.precio ?? 0}`;
-
+${product.nombre ?? ""}`;
     const whatsappUrl = `https://wa.me/56982823533?text=${encodeURIComponent(
       message
     )}`;
