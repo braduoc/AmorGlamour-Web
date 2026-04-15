@@ -6,11 +6,11 @@ export const ContactToUs = () => {
       <div className="max-w-4xl mx-auto px-4 text-center">
 
         <h2 className="text-4xl font-bold text-white mb-6">
-          ¿Listo para hacer un regalo especial?
+          ¿Listo para hacer un detalle especial?
         </h2>
 
         <p className="text-xl text-rose-50 mb-8">
-          Contacta con nosotros por WhatsApp y personaliza tu arreglo ideal
+          Contacta con nosotros por WhatsApp y personaliza tu detalle ideal
         </p>
 
         <a

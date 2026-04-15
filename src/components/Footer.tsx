@@ -17,7 +17,7 @@ export function Footer() {
             </h2>
 
             <p className="text-neutral-400 text-sm leading-relaxed">
-              Detalles de regalo elegantes y personalizados para tus momentos especiales.
+              Detalles elegantes y personalizados para tus momentos especiales.
             </p>
           </div>
 
