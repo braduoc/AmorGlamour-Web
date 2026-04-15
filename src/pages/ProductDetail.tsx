@@ -121,7 +121,7 @@ Precio: $${product.precio ?? 0}`;
 
           {/* INFO */}
           <div>
-            <h1 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-3 md:mb-4">
               {product.nombre}
             </h1>
 
