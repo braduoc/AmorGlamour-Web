@@ -30,13 +30,13 @@ export function RelatedCarousel({ arreglos, currentId }: Props) {
   }, [arreglos, currentId]);
 
   return (
-    <div className="mt-20 pl-8 bg-white py-10 shadow">
+    <div className="mt-20 pl-8 bg-white py-10 shadow ">
       
       <h2 className="text-2xl font-bold mb-6">
         También te puede interesar
       </h2>
 
-      <div className="flex gap-2 overflow-x-auto pb-4 scroll-smooth">
+      <div className="flex gap-2 overflow-x-auto overflow-y-hidden pb-4 scroll-smooth">
         {related.map((item) => (
           <div key={item.id} className="min-w-[330px]">
             <ProductCard product={item} />
