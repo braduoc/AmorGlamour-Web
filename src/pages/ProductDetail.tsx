@@ -98,12 +98,14 @@ Precio: $${product.precio ?? 0}`;
               <img
                 src={product.imagenUrl}
                 alt={product.nombre}
+                loading="lazy"
+                decoding="async"
                 onClick={() => setOpenImage(true)}
                 className="
-                  w-full h-full object-cover
-                  cursor-zoom-in
-                  transition-transform duration-700 hover:scale-105
-                "
+    w-full h-full object-cover
+    cursor-zoom-in
+    transition-transform duration-700 hover:scale-105
+  "
               />
 
               {/* TOP BADGE */}
@@ -133,8 +135,8 @@ Precio: $${product.precio ?? 0}`;
 
               <span
                 className={`text-3xl font-bold ${product.precioAnterior
-                    ? "text-red-500"
-                    : "text-neutral-900"
+                  ? "text-red-500"
+                  : "text-neutral-900"
                   }`}
               >
                 ${Number(product.precio ?? 0).toFixed(0)}
@@ -152,8 +154,8 @@ Precio: $${product.precio ?? 0}`;
                 onClick={handleBuyNow}
                 disabled={product.esAgotado}
                 className={`w-full py-6 text-lg rounded-full transition ${product.esAgotado
-                    ? "bg-neutral-400 cursor-not-allowed"
-                    : "bg-green-500 hover:bg-green-600 text-white"
+                  ? "bg-neutral-400 cursor-not-allowed"
+                  : "bg-green-500 hover:bg-green-600 text-white"
                   }`}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
@@ -210,12 +212,14 @@ Precio: $${product.precio ?? 0}`;
           <img
             src={product.imagenUrl}
             alt={product.nombre}
+            loading="lazy"
+            decoding="async"
             className="
-              max-h-[90vh] max-w-[90vw]
-              object-contain
-              rounded-2xl
-              shadow-2xl
-            "
+    max-h-[90vh] max-w-[90vw]
+    object-contain
+    rounded-2xl
+    shadow-2xl
+  "
             onClick={(e) => e.stopPropagation()}
           />
         </div>

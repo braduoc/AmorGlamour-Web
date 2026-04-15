@@ -91,6 +91,8 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
                 <img
                   src={imagesByCategory[cat] ?? "/placeholder.jpg"}
                   alt={cat}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-72 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
