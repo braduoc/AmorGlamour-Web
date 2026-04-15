@@ -20,17 +20,39 @@ const iconMap: Record<string, LucideIcon> = {
   Boxes: Gift,
 };
 
+const orderPriority = ["Desayunos", "Flores", "Boxes"];
+
 export function Categories({ arreglos = [] }: CategoriesProps) {
   const navigate = useNavigate();
 
   const categorias = useMemo(() => {
-    return Array.from(
+    const unique = Array.from(
       new Set(
         arreglos
           .map((a) => a.categoria)
           .filter((c): c is string => Boolean(c))
       )
     );
+
+    return unique.sort((a, b) => {
+      const indexA = orderPriority.indexOf(a);
+      const indexB = orderPriority.indexOf(b);
+
+      const aIn = indexA !== -1;
+      const bIn = indexB !== -1;
+
+      // ambos en prioridad
+      if (aIn && bIn) return indexA - indexB;
+
+      // solo A en prioridad
+      if (aIn) return -1;
+
+      // solo B en prioridad
+      if (bIn) return 1;
+
+      // resto en orden alfabético
+      return a.localeCompare(b);
+    });
   }, [arreglos]);
 
   const imagesByCategory = useMemo(() => {
@@ -118,8 +140,6 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
                     <p className="text-sm opacity-80">
                       Explorar detalles de {cat.toLowerCase()}
                     </p>
-
-                    
 
                   </div>
                 </div>

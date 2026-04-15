@@ -3,19 +3,35 @@ import { Menu, X } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useArreglos } from "../hooks/useArreglos";
 
+const orderPriority = ["Desayunos", "Flores", "Boxes"];
+
 export function Header() {
   const { arreglos = [] } = useArreglos();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // ✅ categorías seguras
+  // ✅ categorías ordenadas
   const categorias = useMemo(() => {
-    return Array.from(
+    const unique = Array.from(
       new Set(
         arreglos
           .map((a) => a?.categoria)
           .filter((c): c is string => typeof c === "string" && c.trim() !== "")
       )
     );
+
+    return unique.sort((a, b) => {
+      const indexA = orderPriority.indexOf(a);
+      const indexB = orderPriority.indexOf(b);
+
+      const aIn = indexA !== -1;
+      const bIn = indexB !== -1;
+
+      if (aIn && bIn) return indexA - indexB;
+      if (aIn) return -1;
+      if (bIn) return 1;
+
+      return a.localeCompare(b);
+    });
   }, [arreglos]);
 
   return (
