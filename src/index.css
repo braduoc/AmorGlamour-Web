@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔥 ANIMACIÓN SCROLL */
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+/* pausa al hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* ocultar scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 🔥 KEYFRAMES */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
