@@ -121,22 +121,20 @@ Precio: $${product.precio ?? 0}`;
 
           {/* INFO */}
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
               {product.nombre}
             </h1>
 
             {/* PRICE */}
-            <div className="flex items-end gap-3">
+            <div className="flex items-end gap-2 md:gap-3">
               {product.precioAnterior && (
-                <span className="text-lg text-neutral-400 line-through">
+                <span className="text-sm md:text-lg text-neutral-400 line-through">
                   ${Number(product.precioAnterior).toFixed(0)}
                 </span>
               )}
 
               <span
-                className={`text-3xl font-bold ${product.precioAnterior
-                  ? "text-red-500"
-                  : "text-neutral-900"
+                className={`text-xl md:text-3xl font-bold ${product.precioAnterior ? "text-red-500" : "text-neutral-900"
                   }`}
               >
                 ${Number(product.precio ?? 0).toFixed(0)}
