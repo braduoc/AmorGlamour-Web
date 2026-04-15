@@ -34,7 +34,7 @@ export const Cover = () => {
               tracking-wide
               mx-2
             ">
-              Regalos que Expresan Amor
+              Detalles que Expresan Amor
             </h1>
 
             <p className="
@@ -43,7 +43,7 @@ export const Cover = () => {
               mb-8
               drop-shadow-md lg:drop-shadow-none
             ">
-              Arreglos de regalo elegantes y personalizados, entregados con el corazón.
+                 de regalo elegantes y personalizados, entregados con el corazón.
               Cada detalle cuenta.
             </p>
 
@@ -101,7 +101,7 @@ export const Cover = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img
                 src="/images/portada.jpeg"
-                alt="Regalos personalizados"
+                alt="Detalles personalizados"
                 className="w-full h-[600px] object-cover"
               />
             </div>

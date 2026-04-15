@@ -1,5 +1,11 @@
 import { motion } from "motion/react";
-import { Coffee, Flower2, Gift, type LucideIcon } from "lucide-react";
+import {
+  Coffee,
+  Flower2,
+  Gift,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
 import type { Arreglo } from "../types/Arreglo";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
@@ -17,7 +23,6 @@ const iconMap: Record<string, LucideIcon> = {
 export function Categories({ arreglos = [] }: CategoriesProps) {
   const navigate = useNavigate();
 
-  // ✅ categorías seguras
   const categorias = useMemo(() => {
     return Array.from(
       new Set(
@@ -28,7 +33,6 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
     );
   }, [arreglos]);
 
-  // ✅ imagen fija segura
   const imagesByCategory = useMemo(() => {
     const map: Record<string, string> = {};
 
@@ -46,7 +50,7 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
 
   return (
     <section className="py-20 bg-neutral-100">
-      <div className="container mx-auto px-8 max-w-6xl">
+      <div className="container mx-auto px-6 max-w-6xl">
 
         {/* HEADER */}
         <motion.div
@@ -56,17 +60,17 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-extrabold mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
             Nuestras Categorías
           </h2>
 
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Encuentra el regalo perfecto para cada ocasión especial
+          <p className="text-base md:text-lg text-neutral-600 max-w-2xl mx-auto">
+            Encuentra el detalle perfecto para cada ocasión especial
           </p>
         </motion.div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
           {categorias.map((cat, index) => {
             const Icon = iconMap[cat] || Gift;
@@ -75,31 +79,49 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
               <motion.button
                 key={cat}
                 onClick={() => navigate(`/categoria/${cat}`)}
-                className="relative overflow-hidden rounded-3xl shadow-lg text-left group"
+                className="relative overflow-hidden rounded-3xl shadow-lg text-left group cursor-pointer"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
+                {/* IMAGE */}
                 <img
                   src={imagesByCategory[cat] ?? "/placeholder.jpg"}
                   alt={cat}
-                  className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-72 md:h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
-                <div className="absolute inset-0 bg-black/40" />
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/40 group-active:bg-black/60 md:group-hover:bg-black/60 transition-colors duration-300" />
 
-                <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                {/* CONTENT */}
+                <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6 text-white">
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
 
-                    <Icon className="w-8 h-8 mb-2" />
+                    {/* TOP ROW */}
+                    <div className="flex items-center justify-between mb-2">
+                      <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                      <ArrowRight className="w-5 h-5 opacity-90" />
+                    </div>
 
-                    <h3 className="text-2xl font-bold">{cat}</h3>
+                    {/* TITLE */}
+                    <h3 className="text-xl md:text-2xl font-bold">
+                      {cat}
+                    </h3>
 
+                    {/* DESCRIPTION */}
                     <p className="text-sm opacity-80">
                       Explora productos de {cat.toLowerCase()}
                     </p>
+
+                    {/* CTA MOBILE-FIRST */}
+                    <div className="mt-3 flex items-center gap-2 text-sm font-semibold text-white/90 md:opacity-0 md:group-hover:opacity-100 transition">
+                      Toca para ver
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
 
                   </div>
                 </div>

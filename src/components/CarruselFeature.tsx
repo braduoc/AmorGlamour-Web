@@ -14,7 +14,7 @@ export const CarruselFeature = () => {
     {
       icon: <Heart className="w-8 h-8 text-pink-600" />,
       title: "Personalización",
-      desc: "Cada regalo es único y especial",
+      desc: "Cada detalle es único y especial",
       bg: "bg-pink-100",
     },
     {
