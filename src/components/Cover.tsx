@@ -43,7 +43,7 @@ export const Cover = () => {
               mb-8
               drop-shadow-md lg:drop-shadow-none
             ">
-                 detalle regalo elegantes y personalizados, entregados con el corazón.
+                 detalles elegantes y personalizados, entregados con el corazón.
               Cada detalle cuenta.
             </p>
 
