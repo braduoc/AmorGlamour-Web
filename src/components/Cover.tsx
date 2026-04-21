@@ -19,14 +19,14 @@ export const Cover = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start lg:items-center mx-2 lg:mx-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start lg:items-center mx-12 lg:mx-24">
 
           {/* TEXTO */}
           <div className="text-center lg:text-left">
 
             <h1 className="
-              text-5xl md:text-5xl lg:text-7xl
-              font-bold
+              text-4xl md:text-5xl lg:text-7xl
+              font-extrabold
               text-white lg:text-neutral-900
               mb-6
               drop-shadow-lg lg:drop-shadow-none
@@ -40,7 +40,7 @@ export const Cover = () => {
             <p className="
               text-lg lg:text-2xl px-8 lg:px-0
               text-white lg:text-neutral-900
-              mb-8 text-justify tracking-tight leading-relaxed 
+              mb-8 text-center tracking-tight leading-relaxed 
               drop-shadow-md lg:drop-shadow-none lg:m-0
               lg:text-left
 
