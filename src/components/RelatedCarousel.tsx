@@ -32,7 +32,7 @@ export function RelatedCarousel({ arreglos, currentId }: Props) {
   return (
     <div className="mt-20 pl-8 bg-white py-10 shadow ">
       
-      <h2 className="text-2xl font-bold mb-6">
+      <h2 className="text-2xl font-extrabold mb-6">
         También te puede interesar
       </h2>
 
