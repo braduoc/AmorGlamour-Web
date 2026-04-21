@@ -19,7 +19,7 @@ export const Cover = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start lg:items-center mx-2 lg:mx-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start lg:items-center mx-12 lg:mx-24">
 
           {/* TEXTO */}
           <div className="text-center lg:text-left">
@@ -40,7 +40,7 @@ export const Cover = () => {
             <p className="
               text-lg lg:text-2xl px-8 lg:px-0
               text-white lg:text-neutral-900
-              mb-8
+              mb-8 text-justify tracking-tight leading-relaxed
               drop-shadow-md lg:drop-shadow-none
             ">
                  detalles elegantes y personalizados, entregados con el corazón.
