@@ -122,7 +122,7 @@ export function CategoriaPage() {
         </div>
       </div>
       <a
-        href="https://wa.me/56982823533?text=Hola,%20me%20interesa%20hacer%20un%20pedido"
+        href={`https://wa.me/56982823533?text=Hola,%20me%20interesa%20reservar%20un%20detalle%20de%20la%20categoría%20${safeCat}`}
         target="_blank"
         rel="noopener noreferrer"
         className="

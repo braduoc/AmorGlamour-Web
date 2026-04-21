@@ -48,9 +48,7 @@ export function ProductDetail() {
 
   // 🔥 WhatsApp seguro
   const handleBuyNow = () => {
-    const message = `Hola! Me interesa:
-${product.categoria ?? ""}
-${product.nombre ?? ""}`;
+    const message = `¡Hola! Quiero comprar el detalle ${product.nombre ?? ""}`;
     const whatsappUrl = `https://wa.me/56982823533?text=${encodeURIComponent(
       message
     )}`;
