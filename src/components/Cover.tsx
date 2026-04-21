@@ -40,9 +40,10 @@ export const Cover = () => {
             <p className="
               text-lg lg:text-2xl px-8 lg:px-0
               text-white lg:text-neutral-900
-              mb-8 text-center 
+              mb-8 text-justify tracking-tight leading-relaxed 
               drop-shadow-md lg:drop-shadow-none lg:m-0
               lg:text-left
+
             ">
                  detalles elegantes y personalizados, entregados con el corazón.
               Cada detalle cuenta.

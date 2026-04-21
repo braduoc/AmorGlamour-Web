@@ -5,7 +5,7 @@ export const ContactToUs = () => {
     <section id="contacto" className="py-20 bg-neutral-900">
       <div className="max-w-4xl mx-auto px-4 text-center">
 
-        <h2 className="text-2xl font-bold text-white mb-6">
+        <h2 className="text-3xl font-bold text-white mb-6">
           ¿Listo para hacer un detalle especial?
         </h2>
 
