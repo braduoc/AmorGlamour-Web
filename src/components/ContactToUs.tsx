@@ -5,11 +5,11 @@ export const ContactToUs = () => {
     <section id="contacto" className="py-20 bg-neutral-900">
       <div className="max-w-4xl mx-auto px-4 text-center">
 
-        <h2 className="text-4xl font-bold text-white mb-6">
+        <h2 className="text-2xl font-bold text-white mb-6">
           ¿Listo para hacer un detalle especial?
         </h2>
 
-        <p className="text-xl text-rose-50 mb-8">
+        <p className="text-lg text-rose-50 mb-8">
           Contacta con nosotros por WhatsApp y personaliza tu detalle ideal
         </p>
 
@@ -25,7 +25,7 @@ export const ContactToUs = () => {
     hover:bg-neutral-900 hover:text-white
     border-neutral-500
     border-2 hover:border-white
-    px-6 py-3 text-lg rounded-full
+    px-6 py-3 text-sm rounded-full
     transition-all duration-300
     whitespace-nowrap
     shadow-md hover:shadow-xl

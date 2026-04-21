@@ -34,7 +34,7 @@ export const Cover = () => {
               tracking-wide
               
             ">
-              Detalles que Expresan Amor
+              Detalles que <br/ > Expresan Amor
             </h1>
 
             <p className="
