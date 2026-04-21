@@ -19,7 +19,7 @@ export const Cover = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start lg:items-center mx-12 lg:mx-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start lg:items-center mx-6 lg:mx-24">
 
           {/* TEXTO */}
           <div className="text-center lg:text-left">
