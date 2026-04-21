@@ -40,14 +40,15 @@ export const Cover = () => {
             <p className="
               text-lg lg:text-2xl px-8 lg:px-0
               text-white lg:text-neutral-900
-              mb-8 text-justify tracking-tight leading-relaxed
-              drop-shadow-md lg:drop-shadow-none
+              mb-8 text-center 
+              drop-shadow-md lg:drop-shadow-none lg:m-0
+              lg:text-left
             ">
                  detalles elegantes y personalizados, entregados con el corazón.
               Cada detalle cuenta.
             </p>
 
-            <div className="flex flex-row gap-3 sm:gap-4 justify-center lg:justify-start flex-wrap">
+            <div className="flex flex-row gap-3 lg:mt-8 sm:gap-4 justify-center lg:justify-start flex-wrap">
 
               {/* BOTÓN PRINCIPAL */}
               <Button
