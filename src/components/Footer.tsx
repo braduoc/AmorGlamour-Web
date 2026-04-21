@@ -65,7 +65,7 @@ export function Footer() {
 
               {/* WHATSAPP */}
               <a
-                href="https://wa.me/56982823533?text=Hola,%20me%20interesa%20hacer%20un%20pedido"
+                href="https://wa.me/56982823533?text=Hola,%20me%20interesa%20reservar%20un%20detalle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center transition-all hover:scale-105"
