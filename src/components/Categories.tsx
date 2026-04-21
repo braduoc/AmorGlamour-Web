@@ -1,11 +1,5 @@
 import { motion } from "motion/react";
-import {
-  Coffee,
-  Flower2,
-  Gift,
-  ArrowRight,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight,} from "lucide-react";
 import type { Arreglo } from "../types/Arreglo";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
@@ -14,11 +8,7 @@ interface CategoriesProps {
   arreglos?: Arreglo[];
 }
 
-const iconMap: Record<string, LucideIcon> = {
-  Desayunos: Coffee,
-  Flores: Flower2,
-  Boxes: Gift,
-};
+
 
 const orderPriority = ["Desayunos", "Flores", "Boxes"];
 
@@ -95,7 +85,6 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
           {categorias.map((cat, index) => {
-            const Icon = iconMap[cat] || Gift;
 
             return (
               <motion.button
@@ -126,8 +115,7 @@ export function Categories({ arreglos = [] }: CategoriesProps) {
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
 
                     {/* TOP ROW */}
-                    <div className="flex items-center justify-between mb-2">
-                      <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                    <div className="flex items-end justify-end mb-2">
                       <ArrowRight className="w-5 h-5 opacity-90" />
                     </div>
 

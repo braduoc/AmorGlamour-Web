@@ -41,7 +41,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link to="/">
             <img
-              src="/images/logo.jpeg"
+              src="/images/logo.png"
               alt="logo"
               className="h-16 w-auto object-contain"
             />

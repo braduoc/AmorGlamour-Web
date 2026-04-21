@@ -25,20 +25,20 @@ export const Cover = () => {
           <div className="text-center lg:text-left">
 
             <h1 className="
-              text-5xl lg:text-7xl
+              text-5xl md:text-5xl lg:text-7xl
               font-bold
               text-white lg:text-neutral-900
               mb-6
               drop-shadow-lg lg:drop-shadow-none
               font-[Playfair_Display]
               tracking-wide
-              mx-2
+              
             ">
               Detalles que Expresan Amor
             </h1>
 
             <p className="
-              text-xl lg:text-2xl px-8 lg:px-0
+              text-lg lg:text-2xl px-8 lg:px-0
               text-white lg:text-neutral-900
               mb-8
               drop-shadow-md lg:drop-shadow-none
@@ -56,11 +56,11 @@ export const Cover = () => {
                     .getElementById("categoria")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                size="lg"
+                size="sm"
                 className="
                   relative
                   bg-neutral-900 text-white
-                  px-8 py-6 text-lg rounded-full
+                  px-8 py-6 text-sm rounded-full
                   overflow-hidden
                   border border-white/40
                   transition-all duration-300
@@ -80,13 +80,14 @@ export const Cover = () => {
                 rel="noopener noreferrer"
                 className="
                   flex items-center gap-2
-                  px-4 py-2 text-lg rounded-full
+                  px-4 py-2 text-sm rounded-full
                   border border-white/40 lg:border-neutral-900/40
                   text-white lg:text-neutral-900
                   backdrop-blur-md
                   transition-all duration-300
                   hover:bg-white hover:text-neutral-900
                   hover:shadow-xl hover:scale-105
+                  
                 "
               >
                 <MessageCircle className="w-5 h-5" />
