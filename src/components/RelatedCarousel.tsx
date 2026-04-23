@@ -33,7 +33,7 @@ export function RelatedCarousel({ arreglos, currentId }: Props) {
     <div className="mt-20 pl-8 bg-white py-10 shadow ">
       
       <h2 className="text-2xl font-extrabold mb-6">
-        Los Más Vendidos
+        Los más vendidos
       </h2>
 
       <div className="flex gap-2 overflow-x-auto overflow-y-hidden pb-4 scroll-smooth">
